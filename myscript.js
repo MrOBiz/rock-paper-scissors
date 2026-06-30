@@ -37,7 +37,7 @@ function getHumanChoice(choice){
     }
 }
 
-function finalWinner(){
+function finalWinner(cScore, hScore){
     if(computerScore > humanScore){
         console.log("Computer won the game!")
     }else if(computerScore < humanScore){
@@ -50,6 +50,7 @@ function numberOfMatches(num){
     while(i<num){
         humanChoice = prompt("What's your choice? (Rock, Paper, Scissors)", " ");
         humanChoice = humanChoice.toLowerCase();
+        computerChoice = getComputerChoice();
 
         playRound(humanChoice, computerChoice);
         i++;
@@ -58,7 +59,6 @@ function numberOfMatches(num){
 
 function playRound(hChoice, cChoice){
 
-    computerChoice = getComputerChoice();
     humanChoice = getHumanChoice(humanChoice);
     
     if(hChoice == "rock" && cChoice == "rock"){
@@ -94,7 +94,7 @@ function playRound(hChoice, cChoice){
 function playGame(){
     playRound();
     numberOfMatches(5);
-    finalWinner();
+    finalWinner(computerScore, humanScore);
 }
 
 playGame();
