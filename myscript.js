@@ -2,7 +2,7 @@ const humanScore = 0;
 const computerScore = 0;
 
 const computerChoice = getComputerChoice();
-const humanChoice = +prompt("What's your choice? 1: Rock, 2: Paper, 3: Scissors", " ");
+const humanChoice = prompt("What's your choice? (Rock, Paper, Scissors)", " ");
 
 
 
@@ -11,13 +11,13 @@ function getComputerChoice(){
 
     if (choice >= 0 && choice < 33){
         console.log("Computer: Rock");
-        choice = 1;
+        choice = "Rock";
     }else if (choice >= 33 && choice < 66){
         console.log("Computer: Paper");
-        choice = 2;
+        choice = "Paper";
     }else{
         console.log("Computer: Scissors");
-        choice = 3;
+        choice = "Scissors";
     }
 
     return choice;
@@ -26,15 +26,15 @@ function getComputerChoice(){
 function getHumanChoice(choice){
     
     switch (choice){
-        case 1:
+        case "Rock":
             console.log("Rock");
             break;
 
-        case 2:
+        case "Paper":
             console.log("Paper");
             break;
 
-        case 3:
+        case "Scissors":
             console.log("Scissors");
             break;
     }
