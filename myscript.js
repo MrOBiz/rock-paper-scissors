@@ -1,23 +1,23 @@
-const humanScore = 0;
-const computerScore = 0;
+let humanScore = 0;
+let computerScore = 0;
 
-const computerChoice = getComputerChoice();
-const humanChoice = prompt("What's your choice? (Rock, Paper, Scissors)", " ");
+let computerChoice = getComputerChoice();
+let humanChoice = prompt("What's your choice? (Rock, Paper, Scissors)", " ");
 
-
+humanChoice = humanChoice.toLowerCase();
 
 function getComputerChoice(){
     let choice = (Math.random() * 100);
 
     if (choice >= 0 && choice < 33){
         console.log("Computer: Rock");
-        choice = "Rock";
+        choice = "rock";
     }else if (choice >= 33 && choice < 66){
         console.log("Computer: Paper");
-        choice = "Paper";
+        choice = "paper";
     }else{
         console.log("Computer: Scissors");
-        choice = "Scissors";
+        choice = "scissors";
     }
 
     return choice;
@@ -26,18 +26,25 @@ function getComputerChoice(){
 function getHumanChoice(choice){
     
     switch (choice){
-        case "Rock":
+        case "rock":
             console.log("Rock");
             break;
 
-        case "Paper":
+        case "paper":
             console.log("Paper");
             break;
 
-        case "Scissors":
+        case "scissors":
             console.log("Scissors");
             break;
     }
 }
 
 getHumanChoice(humanChoice);
+
+/*function playRound(hChoice, cChoice){
+    
+    if(hChoice == "Rock" && cChoice == "Rock")
+}
+
+playRound(humanChoice, computerChoice);*/
