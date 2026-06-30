@@ -42,9 +42,36 @@ function getHumanChoice(choice){
 
 getHumanChoice(humanChoice);
 
-/*function playRound(hChoice, cChoice){
+function playRound(hChoice, cChoice){
     
-    if(hChoice == "Rock" && cChoice == "Rock")
+    if(hChoice == "rock" && cChoice == "rock"){
+        console.log("Draw!");
+    }else if(hChoice == "paper" && cChoice == "paper"){
+        console.log("Draw!");
+    }else if(hChoice == "scissors" && cChoice == "scissors"){
+        console.log("Draw!");
+    }else if(hChoice == "rock" && cChoice == "scissors"){
+        console.log("You win!");
+        humanScore +=1;
+    }else if(hChoice == "paper" && cChoice == "rock"){
+        console.log("You win!");
+        humanScore +=1;
+    }else if(hChoice == "scissors" && cChoice == "paper"){
+        console.log("You win!");
+        humanScore +=1;
+    }else if(hChoice == "scissors" && cChoice == "rock"){
+        console.log("Computer wins!");
+        computerScore +=1;
+    }else if(hChoice == "rock" && cChoice == "paper"){
+        console.log("Computer wins!");
+        computerScore +=1;
+    }else if(hChoice == "paper" && cChoice == "scissors"){
+        console.log("Computer wins!");
+        computerScore +=1;
+    }
+
+    console.log(computerScore);
+    console.log(humanScore);
 }
 
-playRound(humanChoice, computerChoice);*/
+playRound(humanChoice, computerChoice);
