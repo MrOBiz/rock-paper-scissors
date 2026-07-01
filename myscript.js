@@ -4,7 +4,7 @@ let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice(){
-    let choice = (Math.random() * 100);
+    let choice = (Math.random()) * 100;
 
     if (choice >= 0 && choice < 33){
         console.log("Computer: Rock");
